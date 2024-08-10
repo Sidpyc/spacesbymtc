@@ -15,10 +15,8 @@ const Navbar = () => {
     const controlNavbar = () => {
         if (typeof window !== 'undefined') {
             if (window.scrollY > lastScrollY) { 
-
                 setShowNavbar(false);
             } else { 
-
                 setShowNavbar(true);
             }
             setLastScrollY(window.scrollY); 
@@ -51,7 +49,7 @@ const Navbar = () => {
                     </ul>
                     <div className='md:hidden text-white ml-4'>
                         <button onClick={handleToggleMenu}>
-                            <RxHamburgerMenu size={25} className={ ` transition-transform duration-1000 ${showNavbar && toggleMenu ? 'rotate-90' : ''}`} />
+                            <RxHamburgerMenu size={25} className={`transition-transform duration-1000 ${showNavbar && toggleMenu ? 'rotate-90' : ''}`} />
                         </button>
                     </div>
                 </div>
@@ -61,17 +59,23 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            {toggleMenu && showNavbar &&(
-                <div className="fixed top-16 left-0 w-full bg-white bg-opacity-90 backdrop-blur-md shadow-lg z-10 p-5 md:hidden animate-fadeInDown">
-                    <ul className='flex flex-col gap-5 text-black'>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Offerings</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-            )}
+            {toggleMenu && showNavbar && (
+                
+                    <div className="fixed top-16 left-0 w-full bg-white bg-opacity-90 backdrop-blur-md shadow-lg z-10 p-5 md:hidden animate-fadeInDown">
+                        <ul className='flex flex-col gap-5 text-black'>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Offerings</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                
+            ) 
+            }
+            {
+                
+            }
         </>
     );
 }

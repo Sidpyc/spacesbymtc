@@ -26,11 +26,17 @@ const config: Config = {
           "0%" :{opacity:'0',transform:'translateY(-20px)'},
           '100%':{opacity:'1',transform:'translateY(0px)'},
         },
+
+        fadeInUp:{
+          "100%" :{opacity:'0',transform:' translateY(0px)'},
+          '0%':{opacity:'1',transform:'translateY(-20px)'},
+        },
         
       },
       animation:{
         fadeIn:'fadeIn 1s ease-in-out',
         fadeInDown:'fadeInDown 1s ease-in-out',
+        fadeInUp:'fadeInUp 1s ease-in-out',
 
       },
 

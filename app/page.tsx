@@ -9,7 +9,7 @@ import VideoSplashScreen from './components/VideoSplashScreen'
 
 const page = () => {
 
-    const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+    const [isVideoPlaying, setIsVideoPlaying] = useState(true);
 
     const handleVideoEnd = () => {
         setIsVideoPlaying(false);
