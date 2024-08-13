@@ -4,7 +4,7 @@ const Contactus = () => {
   return (
     <>
         
-<section className=" bg-[#202020]  h-lvh py-10 ">
+<section id="contactus" className=" bg-[#202020]  h-lvh py-10 ">
   <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md ">
       <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
       <form action="#" className="space-y-8">

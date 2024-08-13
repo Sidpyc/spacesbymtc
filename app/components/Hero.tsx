@@ -1,6 +1,6 @@
 const Hero = () => {
     return (
-        <section className="relative h-[800px] flex items-center justify-center">
+        <section id='home' className="relative h-[800px] flex items-center justify-center -mt-[80px]">
             <div className="absolute inset-0 bg-[url('/images/hugeKitchen.jpg')] bg-cover bg-center filter brightness-50"></div>
             <div className="relative text-center p-10 z-10">
                 <h1 className="text-3xl text-white p-10 md:text-6xl">Today's Design Tomorrow's Reality</h1>     
