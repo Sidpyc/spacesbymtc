@@ -1,20 +1,26 @@
-'use client';
-
 import React, { useState } from 'react';
 import { RxHamburgerMenu } from 'react-icons/rx';
+import { FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaSquareFacebook, FaXTwitter } from 'react-icons/fa6'
 
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
+    const [showDropdown, setShowDropdown] = useState(false);
 
     const handleToggleMenu = () => {
         setToggleMenu(!toggleMenu);
     };
 
+    const handleToggleDropdown = () => {
+        setShowDropdown(!showDropdown);
+    };
+
     return (
         <>
-            <nav className="sticky top-0 flex justify-between w-full p-5 bg-white bg-opacity-30 backdrop-blur-md shadow-lg z-50">
+            <nav className="sticky top-0 flex justify-between items-center w-full p-5 bg-white bg-opacity-30 backdrop-blur-md shadow-lg z-10">
+                {/* Logo with controlled size */}
                 <div className='text-white'>
-                    <h1>Logo</h1>
+                    <img src="/images/logonobg.png" alt="logo" className=" h-10 w-auto" />
                 </div>
 
                 <div className='flex items-center'>
@@ -31,11 +37,37 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className='text-white hidden md:block'>
-                    <a href="#contactus">Contact Us</a>
+                {/* Socials Dropdown triggered by click */}
+                <div className='relative hidden md:block '>
+                    <button
+                        className='text-white cursor-pointer '
+                        onClick={handleToggleDropdown}
+                    >
+                        Socials
+                    </button>
+
+                    {showDropdown && (
+                        <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-10">
+                            <ul className='text-black'>
+                                <li className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
+                                    <FaSquareFacebook size={20} /> <a href="https://www.facebook.com/share/shkeozDiUdRjJzsy/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer">Facebook</a>
+                                </li>
+                                <li className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
+                                    <FaInstagram size={20} /> <a href="https://www.instagram.com/spacesbymtc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram</a>
+                                </li>
+                                <li className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
+                                    <FaLinkedin size={20} /> <a href="https://www.linkedin.com/company/spacesbymtc/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                                </li>
+                                <li className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
+                                    <FaXTwitter size={20} /> <a href="https://x.com/SpacesByMTC" target="_blank" rel="noopener noreferrer">Twitter</a>
+                                </li>
+                            </ul>
+                        </div>
+                    )}
                 </div>
             </nav>
 
+            {/* Mobile Menu */}
             {toggleMenu && (
                 <div className="fixed top-16 left-0 w-full bg-white bg-opacity-90 backdrop-blur-md shadow-lg z-10 p-5 md:hidden animate-fadeInDown">
                     <ul className='flex flex-col gap-5 text-black'>

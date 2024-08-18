@@ -1,32 +1,98 @@
-
-
 const Contactus = () => {
   return (
-    <>
-        
-<section id="contactus" className=" bg-[#202020]  h-lvh py-10 ">
-  <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md ">
-      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
-      <form action="#" className="space-y-8">
-            <div>
-              <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Name</label>
-              <input type="name" id="name" className="rounded-none md:h-[42px] md:max-w-[478px] w-full bg-white pl-[14px] md:pl-[26px] text-[#7D7D7D] focus:outline-none text-base py-3 md:py-0 md:text-base font-light leading-[30px] bg-opacity-10 appearance-none" placeholder="Enter your name " required/>
-          </div>
-          <div>
-              <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-              <input type="email" id="email" className="rounded-none md:h-[42px] md:max-w-[478px] w-full bg-white pl-[14px] md:pl-[26px] text-[#7D7D7D] focus:outline-none text-base py-3 md:py-0 md:text-base font-light leading-[30px] bg-opacity-10 appearance-none" placeholder="Enter your email" required/>
-          </div>
-          <div>
-              <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Topic</label>
-              <input type="text" id="subject" className="rounded-none md:h-[42px] md:max-w-[478px] w-full bg-white pl-[14px] md:pl-[26px] text-[#7D7D7D] focus:outline-none text-base py-3 md:py-0 md:text-base font-light leading-[30px] bg-opacity-10 appearance-none" placeholder="Let us know how we can help you" required/>
-          </div>
-          
-          <button type="submit" className="inline-block border cursor-pointer text-white max-w-[478px] w-full focus:outline-none rounded-none md:h-[55px] text-base py-3 md:py-0 md:text-[20px] leading-[30px] border-none bg-keus-green transition-colors duration-300 ease-in-out">Send message</button>
-      </form>
-  </div>
-</section>
-    </>
-  )
-}
+      <section id="contactus" className="bg-[#202020] h-auto py-16">
+          <div className="container mx-auto px-4 lg:flex lg:justify-between items-center">
+              {/* Left side - Text */}
+              <div className="lg:w-1/2 mb-10 lg:mb-0">
+                  <h2 className="text-4xl font-bold text-white mb-4">
+                      Transform Your Space
+                  </h2>
+                  <p className="text-gray-400 text-lg">
+                      Consult us for a new modern decor and turn your space into a masterpiece.
+                  </p>
+              </div>
 
-export default Contactus
+              {/* Right side - Form */}
+              <div className="lg:w-1/2 bg-gray-800 p-8 rounded-lg shadow-lg">
+                  <form className="space-y-6">
+                      <div>
+                          <label htmlFor="fullname" className="block mb-2 text-sm font-medium text-gray-300">
+                              Full Name
+                          </label>
+                          <input
+                              type="text"
+                              id="fullname"
+                              className="block w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+                              placeholder="Enter your full name"
+                              required
+                          />
+                      </div>
+                      <div>
+                          <label htmlFor="mobile" className="block mb-2 text-sm font-medium text-gray-300">
+                              Mobile
+                          </label>
+                          <input
+                              type="text"
+                              id="mobile"
+                              className="block w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+                              placeholder="Enter your mobile number"
+                              required
+                          />
+                      </div>
+                      <div>
+                          <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-300">
+                              Email
+                          </label>
+                          <input
+                              type="email"
+                              id="email"
+                              className="block w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+                              placeholder="Enter your email address"
+                              required
+                          />
+                      </div>
+                      <div>
+                          <label htmlFor="query" className="block mb-2 text-sm font-medium text-gray-300">
+                              Your Query
+                          </label>
+                          <textarea
+                              id="query"
+                              rows={4}
+                              className="block w-full p-3 bg-gray-700 border  resize-none border-gray-600 rounded-lg text-white placeholder-gray-400 min-h-[200px] max-h-[200px] focus:ring-blue-500 focus:border-blue-500"
+                              placeholder="Describe your query"
+                              required
+                          ></textarea>
+                      </div>
+                      <button
+                          type="submit"
+                          className="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:ring-4 focus:ring-blue-300"
+                      >
+                          Book your appointment
+                      </button>
+                  </form>
+              </div>
+          </div>
+
+          {/* Get in touch section */}
+          <div className="mt-16 text-center border-t border-gray-700 pt-8">
+              <h3 className="text-white text-xl mb-4">Get in touch with us</h3>
+              <div className="flex justify-center space-x-8">
+                  <div className="flex items-center space-x-2">
+                      <span className="text-white text-lg">
+                          <i className="fas fa-phone"></i>
+                      </span>
+                      <span className="text-gray-400">+91 000 000 000 0</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                      <span className="text-white text-lg">
+                          <i className="fas fa-envelope"></i>
+                      </span>
+                      <span className="text-gray-400">spacesbyMTC@gmail.com</span>
+                  </div>
+              </div>
+          </div>
+      </section>
+  );
+};
+
+export default Contactus;

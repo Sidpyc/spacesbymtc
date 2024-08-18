@@ -9,6 +9,7 @@ import VideoSplashScreen from './components/VideoSplashScreen'
 import Offerings from './components/Offerings'
 import Portfolio from './components/Portfolio'
 import Testimonials from './components/Testimonials'
+import Footer from './components/Footer'
 
 const page = () => {
 
@@ -33,6 +34,7 @@ const page = () => {
                     <Portfolio/>
                     <Testimonials/>
                     <Contactus />
+                    <Footer/>
                 </div>
             )}
         </>
